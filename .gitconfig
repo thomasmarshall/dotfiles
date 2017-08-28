@@ -1,0 +1,27 @@
+[alias]
+  aa = add --all
+  ci = commit
+  co = checkout
+  dc = diff --cached
+  pushf = push --force-with-lease
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase -i
+  rbn = rebase -i --no-autosquash
+  st = status
+[color]
+  ui = true
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+[merge]
+  conflictstyle = diff3
+  ff = only
+[push]
+  default = simple
+[rebase]
+  autosquash = true
+[status]
+  showUntrackedFiles = all
+[user]
+  useconfigonly = true
