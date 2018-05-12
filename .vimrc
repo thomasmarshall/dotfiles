@@ -1,7 +1,6 @@
 if exists('*minpac#init')
   call minpac#init()
   call minpac#add('airblade/vim-gitgutter')
-  call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('k-takata/minpac', {'type': 'opt'})
   call minpac#add('othree/html5.vim')
   call minpac#add('othree/yajs.vim')
@@ -9,6 +8,7 @@ if exists('*minpac#init')
   call minpac#add('scrooloose/nerdtree')
   call minpac#add('thoughtbot/vim-rspec')
   call minpac#add('tpope/vim-commentary')
+  call minpac#add('junegunn/fzf.vim')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
@@ -43,12 +43,10 @@ nmap \\ <Plug>CommentaryLine
 
 if executable('rg')
   set grepprg=rg\ --color=never
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
 endif
 
-let g:ctrlp_dont_split = 'nerdtree'
-let g:ctrlp_buffer_func = {'enter': 'HideStatusLine', 'exit': 'ShowStatusLine'}
+set rtp+=/usr/local/opt/fzf
+map <C-p> :Files<CR>
 
 function! HideStatusLine()
   set laststatus=0
