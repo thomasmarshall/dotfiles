@@ -8,6 +8,7 @@ if exists('*minpac#init')
   call minpac#add('scrooloose/nerdtree')
   call minpac#add('thoughtbot/vim-rspec')
   call minpac#add('tpope/vim-commentary')
+  call minpac#add('othree/es.next.syntax.vim')
   call minpac#add('junegunn/fzf.vim')
 endif
 
